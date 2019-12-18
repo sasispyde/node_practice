@@ -1,0 +1,412 @@
+<!-- 	<div class="split1 left">
+		<h1 style="margin-left:15px;margin-top: 54px;font-size: 130px;right: 0;">The Look</h1>
+		<h1 style="margin-top: -30px;margin-left:15px;;font-size: 120px;">Gallery</h1>
+		<div style="margin-left:19px;">
+			<h3>John Doe Showcase</h3>
+			<h3>23 January - 14 February</h3>
+		</div>	
+		<div style="margin-left:19px;margin-top: 24px;">
+			<h5 style="font-size: 15px;">READ MORE</h5>
+		</div>
+	</div> -->
+
+
+
+// style
+
+
+<!-- 	<style type="text/css">
+		.split1 {
+		  height: 80%;
+		  width: 43%;
+		  top: 12%;
+		  position: fixed;
+		  z-index: 1;
+		}
+		.split2 {
+		  height: 80%;
+		  width: 71%;
+		  position: fixed;
+		  z-index: 1;
+		}
+
+		.left {
+		  left: 0;
+		  height: 100vh;
+		}
+		.right {
+		  right: 0;
+		  height: 100vh;
+		}
+	</style> -->
+
+
+// nav
+
+	<style type="text/css">
+		#nav-color
+		{
+			color: black;
+			padding: 20px;
+		}
+	</style>
+
+
+
+	<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include partials/navbar %>
+</head>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<body>
+
+<div class="container emp-profile" style="margin-top:20px;">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="/images/profile.jpeg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                        John Doe
+                                    </h5>
+                                    <h6>
+                                        A Professional Photographer
+                                    </h6>
+                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 15px;">
+                    <div class="col-md-8" style="margin-left: 380px;">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>User Id</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>John123</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>John Doe</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Johndoe@gmail.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>123 456 7890</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Profession</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Photography</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Experience</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Hourly Rate</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>10$/hr</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Total Projects</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>230</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>English Level</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Availability</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>6 months</p>
+                                            </div>
+                                        </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Your Bio</label><br/>
+                                        <p>Your detail description</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+<div class="tab-pane fade" id="profile">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Experience</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Hourly Rate</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>10$/hr</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Total Projects</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>230</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>English Level</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Availability</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>6 months</p>
+                                            </div>
+                                        </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Your Bio</label><br/>
+                                        <p>Your detail description</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                                                        <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" href="#" role="tab" >Timeline</a>
+                                </li>
+
+
+
+
+
+
+
+
+
+
+                                <!--     <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="images/road.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="images/cycle.jpg" alt="">
+      </a>
+    </div>
+     <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="images/camara.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img style="height: 160px;width: 250px;" class="img-fluid img-thumbnail" src="images/mountain.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300" alt="">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300" alt="">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300" alt="">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/sesveuG_rNo/400x300" alt="">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/AvhMzHwiE_0/400x300" alt="">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/2gYsZUmockw/400x300" alt="">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EMSDtjVHdQ8/400x300" alt="">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/8mUEy0ABdNE/400x300" alt="">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/G9Rfc1qccH4/400x300" alt="">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aJeH0KcFkuc/400x300" alt="">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/p2TQ-3Bh3Oo/400x300" alt="">
+          </a>
+    </div> 
+     <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="images/rain.jpeg" alt="">
+      </a>
+    </div> -->
+
+
+new google.maps.LatLng(33.54855,-111.88966), 
+new google.maps.LatLng(33.54197,-111.93687), 
+new google.maps.LatLng(33.5039,-111.9415), 
+new google.maps.LatLng(33.4994,-111.92133), 
+new google.maps.LatLng(33.49431,-111.90459), 
+new google.maps.LatLng(33.49388,-111.88142), 
+new google.maps.LatLng(33.51779,-111.86494), 
+new google.maps.LatLng(33.65035,-112.08467), 
+new google.maps.LatLng(41.96103,161.73531), 
+new google.maps.LatLng(39.12181,152.41427), 
+new google.maps.LatLng(28.63795,93.89929), 
+new google.maps.LatLng(27.23495,99.89259), 
+new google.maps.LatLng(28.5552,173.7323), 
+new google.maps.LatLng(41.26078,100.97045), 
+new google.maps.LatLng(51.03616,177.61931), 
+new google.maps.LatLng(32.7369,86.57286), 
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    <div class="col-lg-3 col-md-4 col-6 img-thumbnail" style="text-align: center;">
+      <img class="img-fluid" src="images/road.jpg" alt="">
+      <p style="margin-top: 7px;">LoremLoremLoremLoremLorem</p>
+      <p>Price : 400</p>
+      <a class="btn btn-primary value" href="#">Buy</a>
+    </div>
+
+     <div class="col-lg-3 col-md-4 col-6 img-thumbnail" style="text-align: center;">
+      <img class="img-fluid img-thumbnail" src="images/cycle.jpg" alt="">
+      <p style="margin-top: 7px;">LoremLoremLoremLoremLorem</p>
+      <p>Price : 400</p>
+      <a class="btn btn-primary value" href="#">Buy</a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-6 img-thumbnail" style="text-align: center;">
+      <img class="img-fluid img-thumbnail" src="images/camara.jpg" alt="">
+      <p style="margin-top: 7px;">LoremLoremLoremLoremLorem</p>
+      <p>Price : 400</p>
+      <a class="btn btn-primary value" href="#">Buy</a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-6 img-thumbnail" style="text-align: center;">
+      <img class="img-fluid img-thumbnail" src="images/rain.jpeg" alt="">
+      <p style="margin-top: 7px;">LoremLoremLoremLoremLorem</p>
+      <p>Price : 400</p>
+      <a class="btn btn-primary value" href="#">Buy</a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-6 img-thumbnail" style="text-align: center;">
+      <img class="img-fluid" src="images/road.jpg" alt="">
+      <p style="margin-top: 7px;">LoremLoremLoremLoremLorem</p>
+      <p>Price : 400</p>
+      <a class="btn btn-primary value" href="#">Buy</a>
+    </div>

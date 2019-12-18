@@ -1,0 +1,20 @@
+#head
+{
+	font-size: 40px;
+}
+.new{
+	margin-bottom: 20px;
+}
+
+.new1
+{
+	margin-top: 20px;
+}
+#submit
+{
+	margin-right: 20px;
+}
+.error
+{
+	color: red;
+}

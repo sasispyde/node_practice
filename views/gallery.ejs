@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+  <link rel="stylesheet" type="text/css" href="css/gallery.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<% include partials/navbar %>
+</head>
+<body>
+
+<div class="container">
+
+  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">John Doe Gallery</h1>
+
+  <hr class="mt-2 mb-5">
+
+  <div class="row text-center text-lg-left">
+    <% result.forEach(function(item) { %>
+      <div class="col-lg-3 col-md-4 col-6 thumbnail">
+        <a href="#" class="d-block mb-4 h-100">
+          <img class="img-fluid img-thumbnail" src=<%="images/"+item.name%> alt="">
+        </a>
+      </div>
+    <%});%>
+  </div>
+
+</div>
+</body>
+</html>

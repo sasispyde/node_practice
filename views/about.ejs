@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/about.css">
+	<title><%= title %></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.js"></script>
+	<% include partials/navbar %>
+</head>
+<body>
+	<div style="width: 350px;margin-left: 38%;">
+		<form style="margin-top: 20px;text-align: center;" method="post" id="form">
+			<center id="head">Contact Details</center>
+				<div class="new1">
+					<input class="form-control new" value="<% if(typeof inputs != 'undefined' && 'name' in  inputs) { %><%=inputs.name%><% } %>" placeholder="Name" maxlength="50" type="text" name="name">
+
+					<span class="error"><% if(typeof error != 'undefined' && 'name' in  error) { %><%= error.name.message %><% } %></span>
+
+					<input class="form-control new" maxlength="40"  value="<% if(typeof inputs != 'undefined' && 'email' in  inputs) { %><%=inputs.email%><% } %>" placeholder="Email" type="text" name="email">
+
+					<span class="error"><% if(typeof error != 'undefined' &&  'email' in  error) { %><%= error.email.message %> <% } %></span>
+
+					<input class="form-control new" maxlength="16"  value="<% if(typeof inputs != 'undefined' && 'number' in  inputs) { %><%=inputs.number%><% } %>" placeholder="Mobile Number" type="text" name="number">
+
+					<span class="error"><% if(typeof error != 'undefined' &&  'number' in  error) { %> <%= error.number.message %> <% } %></span><br>
+
+					<input class="btn btn-primary" id="submit" type="submit" name="submit">
+				</div>
+		</form>
+	</div>	
+	<script type="text/javascript">
+$(function() {
+
+  $("#form").validate({
+    rules: {
+      name: "required",
+      number: {
+      	required:true,
+      	minlength:10,
+      	maxlength:16
+      },
+      email: {
+        required: true,
+        email: true
+      }    
+  	},
+    messages: {
+      name: "Please Enter Your Name",
+      number: {
+      	required:"Please Enter Your Contact Number",
+      	minlength:"The Contact Number is Too Short(min 10)",
+      	maxlength:"The Contact Number is Too Long(max 16)"
+      },
+      email:{
+      	required:"Please Enter Your Contact Email",
+      	email :"Please Enter Valid Email Address"
+      },
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+});
+	</script>	
+</body>
+</html>

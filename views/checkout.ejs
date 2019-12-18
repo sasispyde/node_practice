@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=title%></title>
+	<% include partials/navbar %>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="data">
+	
+
+</div>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+  let tempdata = sessionStorage.getItem('productData');
+  console.log(tempdata);
+  var viewName = typeof tempdata!='null' ? $.parseJSON(tempdata) : [];
+  // sessionStorage.clear();
+  viewName.forEach(function(item){
+  	$("#data").append("<p>"+item.name+"</p>"+"<p>"+item.price+"</p>");
+  });
+});
+</script>
+</body>
+</html>

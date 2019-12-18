@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	<% include partials/navbar %>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/shop.css">
+</head>
+<body>
+	<div class="container">
+  <div style="width: 100%;height: 60px;margin-top: 28px;">
+  	 <a class="btn btn-success" id="cart" style="margin-left: 1015px" href="/checkout">Cart<span id="count"></span></span></a>
+  </div>
+      <div class="row text-center text-lg-left thumbnail">
+        <% result.forEach(function(item){ %>
+        <div class="col-lg-3 col-md-4 col-6 img-thumbnail" style="text-align:center;">
+            <img class="img-fluid" src=<%='images/'+item.name%> alt="">
+            <p style="margin-top: 7px;"><%=item.description%></p>
+            <p>Price : <%=item.price%></p>
+            <span id=<%=item._id%>><a class="btn btn-primary value" href="#" data-id=<%=item._id%> data-name=<%=item.name%> data-price=<%=item.price%> >Buy</a></span>
+        </div>
+        <% }) %>
+      </div>
+<!--       <script type="text/javascript">
+        let tempdata = sessionStorage.getItem('productData');
+        var viewName = typeof tempdata!='null' ? $.parseJSON(tempdata) : new array();
+        console.log(tempdata);console.log(viewName);
+        let data= typeof viewName!="null" ? viewName : [];
+        let count = sessionStorage.getItem('counts');
+      	var value= typeof count!='null' ? count : 0;
+      	$('.value').click(function(event){
+      		value=value+1;
+      		$('#count').empty();
+      		$('#count').append(' '+'('+value+')');
+          event.preventDefault();
+      	});
+
+        $(".value").click(function(){
+          id=$(this).data('id');
+          name=$(this).data('name');
+          price=$(this).data('price');
+          $('#'+id).empty().append("<a class='btn btn-primary' style='pointer-events: none;cursor: default; color:white;'>Added To Cart </a>");
+          var product={"id":id,"name":name,"price":price};
+          sessionStorage.setItem("datas",JSON.stringify(product));
+          let tempdata = sessionStorage.getItem('datas');
+          var viewName = $.parseJSON(tempdata);
+          data.push(viewName);
+        });
+
+        $('#cart').click(function(){
+          sessionStorage.clear();
+          sessionStorage.setItem("productData",JSON.stringify(data));
+          // sessionStorage.setItem("counts",value);
+        });
+    </script> -->
+</body>
+</html>
